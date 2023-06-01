@@ -1,0 +1,66 @@
+<div>
+	<header>
+		<div class="menu-bg"></div>
+		<h3 class="fs-5">Luca Javier</h3>
+
+		<img src="assets/icons/burguer.svg" alt="Burguer button" class="menu-btn" />
+
+		<nav class="menu">
+			<a href="#home">Inicio</a>
+			<a href="#experience">Experiencia</a>
+			<a href="#tools">Herramientas</a>
+			<a href="#contact">Contacto</a>
+		</nav>
+	</header>
+</div>
+
+<style>
+	@import "burguerMenu.css";
+
+	div {
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		position: sticky;
+		top: 0;
+		z-index: 99;
+	}
+	button {
+		display: none;
+	}
+	header {
+		width: 100%;
+		max-width: var(--max-width);
+		margin: auto;
+		height: var(--header-height);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		user-select: none;
+		position: absolute;
+		top: 0;
+		background-color: #2a233e;
+	}
+	h3 {
+		color: var(--primary);
+	}
+	nav > a {
+		color: var(--primary);
+		padding: 0 1rem;
+	}
+
+	a.isActive {
+		color: var(--third);
+	}
+</style>
+
+<script>
+	import headerMenuInteractive from "./headerMenu"
+	import observeSections from "./observer"
+
+	document.addEventListener("DOMContentLoaded", () => {
+		observeSections()
+		headerMenuInteractive()
+	})
+</script>

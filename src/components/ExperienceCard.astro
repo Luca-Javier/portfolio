@@ -1,0 +1,73 @@
+---
+interface Props {
+	title: string
+	rotate?: boolean
+}
+
+const { title, rotate } = Astro.props
+---
+
+<div>
+	<article class=`text-container ${rotate && "rotate-order"}`>
+		<h3 class="fs-3 decorated-title">{title}</h3>
+		<slot />
+	</article>
+
+	<article class="img-container">
+		<slot name="image" />
+	</article>
+</div>
+
+<style>
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 4rem 0;
+	}
+
+	article {
+		width: 50%;
+		height: 600px;
+	}
+
+	.text-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	.img-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	img {
+		height: 500px;
+		object-position: 50%;
+	}
+
+	.rotate-order {
+		order: 1;
+	}
+
+	.rotate-order {
+		text-align: right;
+		align-items: flex-end;
+	}
+
+	@media (max-width: 767px) {
+		div {
+			display: initial;
+		}
+		article {
+			width: 100%;
+			display: initial;
+			height: auto;
+		}
+		img {
+			object-fit: contain;
+		}
+	}
+</style>

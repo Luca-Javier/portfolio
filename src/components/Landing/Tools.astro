@@ -1,0 +1,56 @@
+---
+import tools from "../../constants/tools.json"
+---
+
+<section id="tools">
+	<h2 class="decorated-title fs-1">Mis Herramientas</h2>
+	<p>
+		Durante un año y medio, me sumergí en un intenso proceso de aprendizaje
+		autodidacta en el desarrollo web. A través de dedicación, disciplina y
+		curiosidad, he logrado familiarizarme con varias herramientas que me
+		permiten crear soluciones prácticas. A continuación, encontrarás algunas de
+		las herramientas con las que me he familiarizado y continúo expandiendo mi
+		conocimiento
+	</p>
+
+	<article>
+		{
+			tools.map(tool => (
+				<figure>
+					<img src={tool.src} alt={tool.alt} title={tool.title} />
+					<figcaption>{tool.alt}</figcaption>
+				</figure>
+			))
+		}
+	</article>
+</section>
+
+<style>
+	h2 {
+		text-align: center;
+
+		margin: 4rem auto !important;
+	}
+
+	article {
+		margin: 4rem 0;
+		gap: 1rem;
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+
+	article img {
+		width: 100px;
+		height: 100px;
+	}
+
+	figcaption,
+	figure {
+		text-align: center;
+	}
+
+	figcaption {
+		padding-top: 1rem;
+	}
+</style>

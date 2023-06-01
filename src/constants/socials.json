@@ -1,0 +1,20 @@
+[
+	{
+		"href": "mailto: luca.jav45@gmail.com",
+		"text": "Correo",
+		"src": "assets/socials/gmail.svg",
+		"alt": "Gmail icon"
+	},
+	{
+		"href": "https://github.com/Luca-Javier",
+		"text": "GitHub",
+		"src": "assets/socials/github.svg",
+		"alt": "GitHub Icon"
+	},
+	{
+		"href": "https://www.linkedin.com/in/luca-javier-a103a2231/",
+		"text": "Linkedin",
+		"src": "assets/socials/linkedin.svg",
+		"alt": "Linkedin icon"
+	}
+]

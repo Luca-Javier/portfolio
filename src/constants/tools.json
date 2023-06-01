@@ -1,0 +1,77 @@
+[
+	{
+		"src": "assets/tools/figma.svg",
+		"title": "Figma for design",
+		"alt": "Figma"
+	},
+	{
+		"src": "assets/tools/js.svg",
+		"title": "Javascript for logic in web",
+		"alt": "Javascript"
+	},
+	{
+		"src": "assets/tools/css.svg",
+		"title": "CSS for styles",
+		"alt": "CSS"
+	},
+	{
+		"src": "assets/tools/html.svg",
+		"title": "HTML for structure",
+		"alt": "HTML"
+	},
+	{
+		"src": "assets/tools/react.svg",
+		"title": "React for have states and global states",
+		"alt": "React"
+	},
+	{
+		"src": "assets/tools/astro.svg",
+		"title": "Astro for SSG",
+		"alt": "Astro"
+	},
+	{
+		"src": "assets/tools/next-js.svg",
+		"title": "Next JS for SSR and SSG",
+		"alt": "Next JS"
+	},
+	{
+		"src": "assets/tools/node-js.svg",
+		"title": "Node JS for backend",
+		"alt": "Node JS"
+	},
+	{
+		"src": "assets/tools/express-js.svg",
+		"title": "Express JS for backend",
+		"alt": "Express JS"
+	},
+	{
+		"src": "assets/tools/mongodb.svg",
+		"title": "Mongodogb for database NoSQL",
+		"alt": "MongoDB"
+	},
+	{
+		"src": "assets/tools/mysql.svg",
+		"title": "MYSQL for database SQL",
+		"alt": "MySQL"
+	},
+	{
+		"src": "assets/tools/JSDoc.svg",
+		"title": "JSDoc for documentation",
+		"alt": "JSDoc"
+	},
+	{
+		"src": "assets/tools/redux.svg",
+		"title": "Redux for state managment",
+		"alt": "Redux"
+	},
+	{
+		"src": "assets/tools/typescript.svg",
+		"title": "typescript for have types in javascript",
+		"alt": "Typescript"
+	},
+	{
+		"src": "https://www.gitbook.com/cdn-cgi/image/width=40,dpr=2,height=40,fit=contain,format=auto/https%3A%2F%2F1143667985-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-L9iS6Wm2hynS5H9Gj7j%252Favatar.png%3Fgeneration%3D1523462254548780%26alt%3Dmedia",
+		"title": "i18next for translations",
+		"alt": "i18next"
+	}
+]

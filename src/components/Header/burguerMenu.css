@@ -1,0 +1,43 @@
+.menu-bg {
+	position: fixed;
+	opacity: 0;
+	inset: 0;
+	background-color: var(--second);
+	z-index: 90;
+	pointer-events: none;
+	-webkit-transition: opacity 0.4s ease;
+	-moz-transition: opacity 0.4s ease;
+	-ms-transition: opacity 0.4s ease;
+	transition: opacity 0.4s ease;
+}
+
+.menu-btn {
+	display: none;
+	height: 2rem;
+	fill: var(--primary);
+}
+
+@media (max-width: 767px) {
+	.menu-btn {
+		display: block;
+	}
+	.menu {
+		opacity: 0;
+		right: -300px;
+		display: flex;
+		gap: 1rem;
+		flex-direction: column;
+		position: absolute;
+		transition: right 0.5s ease-out, opacity 1s;
+		top: var(--header-height);
+		z-index: 100;
+	}
+	.menu.isActive {
+		opacity: 1;
+		right: 0;
+	}
+	.menu-bg.isActive {
+		pointer-events: all;
+		opacity: 0.2;
+	}
+}

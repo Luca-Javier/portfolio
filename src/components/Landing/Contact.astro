@@ -1,0 +1,153 @@
+---
+import socials from "../../constants/socials.json"
+---
+
+<section id="contact">
+	<h2 class="fs-1 decorated-title">Contacto</h2>
+	<form>
+		<div class="loader-container">
+			<div class="loader">
+				<img src="/loader.svg" alt="Loader" />
+			</div>
+			<textarea name="message" value="" placeholder="Hola, que tal..." required>
+			</textarea>
+		</div>
+		<input type="submit" value="Enviar" />
+	</form>
+	<h2 class="fs-1 test1 decorated-title">Redes</h2>
+	<ul>
+		{
+			socials.map(social => (
+				<li>
+					<a href={social.href} target="_blank" rel="noopener">
+						<img src={social.src} alt={social.alt} />
+						<span>{social.text}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</section>
+
+<script>
+	import emailjs from "@emailjs/browser"
+	import notificate from "../Notification/notificate"
+
+	const servide_id = import.meta.env.PUBLIC_SERVICE_ID,
+		template_id = import.meta.env.PUBLIC_TEMPLATE_ID,
+		user_id = import.meta.env.PUBLIC_USER_ID
+
+	document.querySelector("textarea").textContent = ""
+
+	const $loader = document.querySelector(".loader")
+
+	document.addEventListener("submit", e => {
+		e.preventDefault()
+		const message = e.target.message.value
+
+		$loader.classList.add("isActive")
+
+		emailjs
+			.send(servide_id, template_id, { message }, user_id)
+			.then(() => notificate({ message: "Mensaje enviado con exito" }))
+			.catch(() =>
+				notificate({ message: "Error al enviar el mensaje", error: true })
+			)
+			.finally(() => {
+				e.target.reset()
+				$loader.classList.remove("isActive")
+			})
+	})
+</script>
+
+<style>
+	section {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	input,
+	textarea {
+		font-size: 16px;
+		font-family: var(--font);
+		color: var(--third);
+		resize: none;
+		padding: 1rem;
+	}
+
+	input {
+		width: 12ex;
+		padding: 1rem;
+		border-radius: 15px;
+		background-color: var(--primary);
+		cursor: pointer;
+	}
+	input:hover {
+		filter: brightness(1.1);
+	}
+
+	textarea {
+		height: 100%;
+		width: 60vw;
+		background-color: #1b172a;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 4rem auto;
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	li {
+		margin-bottom: 1rem;
+	}
+
+	ul img {
+		width: 20px;
+	}
+	ul li:last-child {
+		margin-bottom: 0;
+	}
+	ul a {
+		display: flex;
+		align-items: center;
+		gap: 0 1rem;
+	}
+
+	.loader-container {
+		margin-top: 2rem;
+		height: 30vh;
+		position: relative;
+	}
+	.loader {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		background-color: var(--second);
+		pointer-events: none;
+		transition: opacity 0.4s;
+	}
+	.loader.isActive {
+		pointer-events: all;
+		opacity: 0.2;
+	}
+	.loader img {
+		opacity: 1;
+		width: 30px;
+	}
+</style>
