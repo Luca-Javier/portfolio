@@ -49,12 +49,9 @@ const { title, rotate } = Astro.props
 	}
 
 	.rotate-order {
-		order: 1;
-	}
-
-	.rotate-order {
 		text-align: right;
 		align-items: flex-end;
+		order: 1;
 	}
 
 	@media (max-width: 767px) {
@@ -63,8 +60,13 @@ const { title, rotate } = Astro.props
 		}
 		article {
 			width: 100%;
-			display: initial;
+			align-items: center;
 			height: auto;
+			text-align: center;
+		}
+		.rotate-order {
+			text-align: center;
+			align-items: inherit;
 		}
 		img {
 			object-fit: contain;
