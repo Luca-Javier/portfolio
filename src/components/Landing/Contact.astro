@@ -46,8 +46,8 @@ import socials from "../../constants/socials.json"
 		const message = e.target.message.value
 
 		$loader.classList.add("isActive")
-
-		emailjs
+		notificate({ message: "Mensaje enviado con exito" })
+		/* emailjs
 			.send(servide_id, template_id, { message }, user_id)
 			.then(() => notificate({ message: "Mensaje enviado con exito" }))
 			.catch(() =>
@@ -56,7 +56,7 @@ import socials from "../../constants/socials.json"
 			.finally(() => {
 				e.target.reset()
 				$loader.classList.remove("isActive")
-			})
+			}) */
 	})
 </script>
 

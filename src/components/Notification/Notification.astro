@@ -1,4 +1,4 @@
-<article class="notification">
+<div class="notification">
 	<div>
 		<img
 			class="notification-succes-img"
@@ -13,7 +13,7 @@
 
 		<p class="notification-message"></p>
 	</div>
-</article>
+</div>
 
 <style>
 	.notification {
@@ -26,7 +26,7 @@
 		opacity: 0;
 		transition: opacity 0.4s;
 	}
-	div {
+	.notification > div {
 		pointer-events: none;
 		display: inline-block;
 		background-color: #1b172a;
