@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config"
 export default defineConfig({
 	site: "https://luca-javier.github.io",
 	base: "/portfolio",
-	//compressHTML: true,
+	compressHTML: true,
 
 	/* server: {
 		host: true,
