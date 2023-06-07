@@ -1,6 +1,6 @@
-<section id="home">
+<div id="home">
 	<article>
-		<h1 class="fs-1 decorated-title">Luca Javier</h1>
+		<h2 class="fs-1 decorated-title">Luca Javier</h2>
 		<p>
 			Bienvenido(a). Soy un programador frontend especializado en ReactJS con
 			bases solidas.<br /><br /> Estoy listo para enfrentar desafíos y seguir creciendo
@@ -8,17 +8,17 @@
 			habilidades y proyectos. ¡Juntos podemos construir soluciones web impactantes!
 		</p>
 	</article>
-	<article class="img-container">
+	<div class="img-container">
 		<img src="fachero.jpg" alt="Luca Javier" />
-	</article>
-</section>
+	</div>
+</div>
 
 <style>
 	h1 {
 		color: var(--primary);
 	}
 
-	section {
+	#home {
 		margin: 0 !important;
 		display: flex;
 		align-items: center;
@@ -27,7 +27,8 @@
 		gap: 2rem;
 	}
 
-	article {
+	article,
+	.img-container {
 		display: flex;
 		justify-self: center;
 		align-items: center;

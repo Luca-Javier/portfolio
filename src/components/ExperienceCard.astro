@@ -13,9 +13,9 @@ const { title, rotate } = Astro.props
 		<slot />
 	</article>
 
-	<article class="img-container">
+	<div class="img-container">
 		<slot name="image" />
-	</article>
+	</div>
 </div>
 
 <style>
@@ -26,7 +26,8 @@ const { title, rotate } = Astro.props
 		margin: 4rem 0;
 	}
 
-	article {
+	article,
+	.img-container {
 		width: 50%;
 		height: 600px;
 	}

@@ -18,7 +18,9 @@ import tools from "../../constants/tools.json"
 			tools.map(tool => (
 				<figure>
 					<img src={tool.src} alt={tool.alt} title={tool.title} />
-					<figcaption>{tool.alt}</figcaption>
+					<figcaption>
+						<h3>{tool.alt}</h3>
+					</figcaption>
 				</figure>
 			))
 		}
